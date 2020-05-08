@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>HTML5 Canvas打造超梦幻网页背景特效</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/htmleaf-demo.css">
+	<link rel="stylesheet" href="css/style.css">
+	<style>
+ body {
+            background-color: rgb(132, 171, 204);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        /* 旋转木马   始 */
+        #main img {
+            width: 250px;
+            height: 400px;
+            position: absolute;
+            border: 5px green double;
+        }
+
+        #main img:nth-child(1) {
+            transform: translateZ(500px);
+        }
+
+        #main img:nth-child(2) {
+            transform: rotateY(40deg) translateZ(500px);
+        }
+
+        #main img:nth-child(3) {
+            transform: rotateY(80deg) translatez(500px);
+        }
+
+        #main img:nth-child(4) {
+            transform: rotateY(120deg) translatez(500px);
+        }
+
+        #main img:nth-child(5) {
+            transform: rotateY(160deg) translatez(500px);
+        }
+
+        #main img:nth-child(6) {
+            transform: rotateY(200deg) translatez(500px);
+        }
+
+        #main img:nth-child(7) {
+            transform: rotateY(240deg) translatez(500px);
+        }
+
+        #main img:nth-child(8) {
+            transform: rotateY(280deg) translatez(500px);
+        }
+
+        #main img:nth-child(9) {
+            transform: rotateY(320deg) translatez(500px);
+        }
+
+        /*# id选择器   id不能重复命名*/
+        #main {
+            margin: 100px auto;
+            /*让父元素居中*/
+            width: 300px;
+            height: 400px;
+            /*声明一个3D空间*/
+            transform-style: preserve-3d;
+            transform: rotateX(-10deg);
+            animation-name: animate;
+            animation-duration: 10s;
+            /*动画执行次数*/
+            animation-iteration-count: infinite;
+            /*动画持续时间：无限 */
+            animation-timing-function: linear;
+            position: relative;
+        }
+
+        /*定义一个动画*/
+        @keyframes animate {
+            0% {
+                transform: rotateX(-10deg) rotateY(0deg);
+            }
+
+            100% {
+                transform: rotateX(-10deg) rotateY(360deg);
+            }
+        }
+
+
+
+
+
+
+
+
+		.app {
+			width: 100px;
+			height: 300px;
+			background: violet
+		}
+	</style>
+</head>
+
+<body>
+	<div class="app"></div>
+	<canvas id="c1"></canvas>
+	<canvas id="c2"></canvas>
+	<div class="htmleaf-header">
+			<div id="main">
+
+					<!--    最后使用文  -->
+					<!-- <img src="./image/img01.jpg" />
+					<img src="./image/img02.jpg" />
+					<img src="./image/img03.jpg" />
+					<img src="./image/img04.jpg" />
+					<img src="./image/img05.jpg" />
+					<img src="./image/img06.jpg" />
+					<img src="./image/img07.jpg" />
+					<img src="./image/img08.jpg" />
+					<img src="./image/img09.jpg" />
+					<img src="./image/img10.jpg" /> -->
+			
+					<!--  test  -->
+					<img src="./image/logo.jpg" />
+					<img src="./image/logo.jpg" />
+					<img src="./image/logo.jpg" />
+					<img src="./image/logo.jpg" />
+					<img src="./image/logo.jpg" />
+					<img src="./image/logo.jpg" />
+					<img src="./image/logo.jpg" />
+					<img src="./image/logo.jpg" />
+					<img src="./image/logo.jpg" />
+					<img src="./image/logo.jpg" />
+				</div>
+		<div class="app"></div>
+	</div>
+	<script src="js/index.js"></script>
+</body>
+
+</html>
